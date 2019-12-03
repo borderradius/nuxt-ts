@@ -1,15 +1,28 @@
 <template>
   <v-layout>
-    <v-flex class="text-center">
-      <img src="/v.png" alt="Vuetify.js" class="mb-5" />
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-flex>
+    <Test :user="user" :product="product" />
   </v-layout>
 </template>
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+// eslint-disable-next-line no-unused-vars
+import { User, Product } from '../types';
+import Test from '../components/ts-test.vue';
+
+@Component({
+  components: {
+    Test,
+  },
+})
+export default class extends Vue {
+  user: User = {
+    firstName: 'goo',
+    lastName: 'choong mo',
+  };
+
+  product: Product = {
+    id: 0,
+    tags: ['shoe', 'cloth'],
+  };
+}
+</script>
