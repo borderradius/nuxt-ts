@@ -20,8 +20,8 @@ import { User, Product } from '../types';
 
 @Component
 export default class TestComponent extends Vue {
-  @Prop({ type: Object, required: true }) private user!: User;
-  @PropSync('product', { type: Object }) item!: Product;
+  @Prop({ type: Object, required: true }) private user!: User; // 넘겨준 prop키값 써야함.
+  @PropSync('product', { type: Object }) item!: Product; // 넘겨준 prop키값을 내가 원하는걸로 변경.
 
   msg: string = 'hello';
 

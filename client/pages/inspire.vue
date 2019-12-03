@@ -22,7 +22,7 @@ export default class extends Vue {
 
   product: Product = {
     id: 0,
-    tags: ['shoe', 'cloth'],
+    tags: ['shoe', 'cloth1'],
   };
 }
 </script>
